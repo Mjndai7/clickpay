@@ -1,6 +1,5 @@
 "use client";
 
-import CardWrapper from "./cardwrapper";
 import {
   Form,
   FormControl,
@@ -20,6 +19,7 @@ import { useFormStatus } from "react-dom";
 import { useState } from "react";
 import CustomInput from "../CustomInput";
 import { Loader2 } from "lucide-react";
+import Cardwrapper from "./Cardwrapper";
 
 const LoginForm = () => {
   const [loading, setLoading] = useState(false);
@@ -39,7 +39,7 @@ const LoginForm = () => {
 
   const { pending } = useFormStatus();
   return (
-    <CardWrapper
+    <Cardwrapper
       label="send,spend and save smarter"
       title="Sign in to Clickpay"
       backButtonHref="/sign-up"
@@ -74,7 +74,7 @@ const LoginForm = () => {
           </Button>
         </form>
       </Form>
-    </CardWrapper>
+    </Cardwrapper>
   );
 };
 

@@ -2,7 +2,7 @@
 
 import React, { useState } from "react";
 import { useRouter } from "next/router";
-import CardWrapper from "./CardWrapper";
+
 import {
   Form,
   FormControl,
@@ -19,6 +19,7 @@ import { Button } from "../ui/button";
 import CustomInput from "../CustomInput";
 import { Loader2 } from "lucide-react";
 import { z } from "zod";
+import Cardwrapper from "./Cardwrapper";
 
 // Define types for form values
 type LoginFormValues = z.infer<typeof LoginSchema>;
@@ -46,7 +47,7 @@ const LoginForm: React.FC = () => {
   };
 
   return (
-    <CardWrapper
+    <Cardwrapper
       label="send, spend, and save smarter"
       title="Sign in to Clickpay"
       backButtonHref="/sign-up"
@@ -82,7 +83,7 @@ const LoginForm: React.FC = () => {
           </Button>
         </form>
       </Form>
-    </CardWrapper>
+    </Cardwrapper>
   );
 };
 
